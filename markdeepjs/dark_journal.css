@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.md div.title {
+  color: rgba(75, 165, 255, 0.8);
+  font-family: 'Russo One', Arial;
+  font-size: 200%;
+}
+
+.md a:link, .md a:visited{
+  color:rgb(224, 138, 57);
+  font-family: Arial, Helvetica, "sans serif";
+}
+
+.md hr {
+  height: 0px;
+  border: none;
+  border-top: 0.1pt solid rgb(120, 120, 120);
+}
+
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+  color: rgba(60, 160, 255, 0.8);
+  border-color: #ff9100;
+  font-family: 'Russo One', Arial;
+  font-size: 150%;
+  padding-bottom: 0px;
+}
+
+.md h2, .md .nonumberh2 {
+  font-size: 125%;
+}
+
+.md h3, .md h4, .md h5, .md h6, .md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+  font-size: 115%
+}
+
+.md pre.listing {
+  background: rgb(220, 220, 220);
+  padding: 0%;
+}
+
+.md .tilde code, .md .backtick code {
+  color: rgb(0, 0, 0);
+}
+
+.md pre.listing span.line{
+    margin-left:10px;
+}
+
+.md pre.listing .linenumbers span.line:before{
+  width:20px;
+  margin-left:0px;
+  padding-right:10px;
+  margin-right:0px;
+  color:rgb(40, 40, 40);
+}
+
+b, em.asterisk {
+  font-style: normal; font-weight: bold;
+}
+
+a em.asterisk {
+  color: #6dafff;
+}
+
+@media screen {
+  .md svg.diagram {
+    stroke: rgb(200, 200, 200);
+    fill: rgb(200, 200, 200);
+  }
+
+  .md svg.diagram .opendot {
+    fill: rgb(0, 0, 0);
+  }
+
+  body {
+    position: absolute;
+    left: 240px;
+    margin-right: 0px;
+    margin-left: 10px;
+    right: 0px;
+    overflow: auto;
+    max-width: none;
+    background: rgb(40, 40, 40);
+    color: rgb(200, 200, 200);
+    font-family: Roboto, Arial, Helvetica, "sans serif";
+    text-align: justify;
+  }
+
+  .md .longTOC {
+    display: block;
+    white-space: nowrap;
+    width: 240px;
+    border-right: 1px solid rgb(200, 200, 200);
+    overflow-y:scroll;
+    font-size: 13px;
+    font-family: inherit;
+    background: rgb(40, 40, 40);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom:0px;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .md .tocHeader {
+    display: none;
+  }
+
+  .md .tocTop {
+    display: block;
+  }
+
+  .md table.table td {
+    border: 1px solid #030251;
+  }
+
+  .md table.table th {
+    background: rgb(10, 70, 175, 0.5);
+    border: none;
+  }
+
+  .md table.table th:last-child {
+    border-right: 1px solid rgb(10, 50, 130);
+  }
+
+  .md table.table tr:nth-child(even) {
+    background-color: rgba(0, 15, 50, 0.5);
+  }
+  .md table.table tr:nth-child(odd) {
+    background-color: rgba(50, 20, 0, 0.5);
+  }
+
+  b, em.asterisk {
+    color: rgb(170, 200, 205);
+  }
+}
+
+div.markdeepFooter {
+  display: none;
+}

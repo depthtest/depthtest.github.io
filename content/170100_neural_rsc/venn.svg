@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="174.56868mm"
+   height="132.45677mm"
+   viewBox="0 0 618.55044 469.33502"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="venn.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="283.25279"
+     inkscape:cy="87.81018"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1448"
+     inkscape:window-height="1069"
+     inkscape:window-x="53"
+     inkscape:window-y="288"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-57.572524,-275.35315)">
+    <ellipse
+       style="fill:none;stroke:#ffffff;stroke-width:1.2783531;stroke-opacity:1"
+       id="path4150"
+       cx="366.84775"
+       cy="510.02066"
+       rx="308.63605"
+       ry="234.02834" />
+    <ellipse
+       style="fill:none;stroke:#ffffff;stroke-width:1.07889056;stroke-opacity:1"
+       id="path4152"
+       cx="285.36807"
+       cy="512.94073"
+       rx="218.65858"
+       ry="166.63573" />
+    <ellipse
+       style="fill:none;stroke:#ffffff;stroke-width:0.85698944;stroke-opacity:1"
+       id="path4154"
+       cx="209.10159"
+       cy="496.27319"
+       rx="127.35073"
+       ry="74.317711" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="368.70566"
+       y="715.98138"
+       id="text4156"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4158"
+         x="368.70566"
+         y="715.98138"
+         style="font-size:25px;stroke:none;stroke-opacity:1;fill:#00c0ff;fill-opacity:1;">AI</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#80ff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="201.02037"
+       y="616.98645"
+       id="text4160"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="201.02037"
+         y="616.98645"
+         id="tspan4164"
+         style="font-size:25px;stroke:none;stroke-opacity:1;fill:#80ff00;fill-opacity:1;">Machine Learning</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff8000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="100.77372"
+       y="504.9704"
+       id="text4168"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4170"
+         x="100.77372"
+         y="504.9704">Neural Networks</tspan></text>
+  </g>
+</svg>
