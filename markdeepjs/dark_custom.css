@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
 .md div.title {
-  color: rgba(75, 165, 255, 0.8);
   font-family: 'Russo One', Arial;
   font-size: 200%;
+  letter-spacing: 2px;
 }
 
-.md a:link, .md a:visited{
-  color:rgb(224, 138, 57);
-  font-family: Arial, Helvetica, "sans serif";
+body#md {
+  font-family: Roboto, Arial, Helvetica, "sans serif";
+  text-align: justify;
 }
 
 .md hr {
@@ -19,11 +20,10 @@
 }
 
 .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
-  color: rgba(60, 160, 255, 0.8);
-  border-color: #ff9100;
   font-family: 'Russo One', Arial;
   font-size: 150%;
   padding-bottom: 0px;
+  letter-spacing: 2px;
 }
 
 .md h2, .md .nonumberh2 {
@@ -55,25 +55,33 @@
   color:rgb(40, 40, 40);
 }
 
-b, em.asterisk {
-  font-style: normal; font-weight: bold;
-}
-
-a em.asterisk {
-  color: #6dafff;
-}
-
 @media screen {
+
+  .md div.title {
+    color: rgba(176, 215, 225);
+  }
+  
+  .md a:link, .md a:visited{
+    color:rgb(241, 128, 45);
+    font-family: Arial, Helvetica, "sans serif";
+  }
+  
+  .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+    color: rgba(176, 215, 225);
+    border-color: rgb(241, 128, 45);
+  }
+
   body#md {
-    background: rgb(40, 40, 40);
-    color: rgb(200, 200, 200);
+    /* background: rgb(18, 55, 64); */
+    background: rgb(40,40,40);
+    color: rgb(246, 246, 246);
     font-family: Roboto, Arial, Helvetica, "sans serif";
     text-align: justify;
   }
 
   .md svg.diagram {
-    stroke: rgb(200, 200, 200);
-    fill: rgb(200, 200, 200);
+    stroke: rgb(246, 246, 246);
+    fill: rgb(246, 246, 246);
   }
 
   .md svg.diagram .opendot {
@@ -81,28 +89,21 @@ a em.asterisk {
   }
 
   .md table.table td {
-    border: 1px solid #030251;
+    border: 1px solid rgb(176, 215, 225);
   }
 
   .md table.table th {
-    background: rgb(10, 70, 175, 0.5);
-    border: none;
-  }
-
-  .md table.table th:last-child {
-    border-right: 1px solid rgb(10, 50, 130);
+    background: rgba(18, 55, 64);
+    border: 1px solid rgb(176, 215, 225);
   }
 
   .md table.table tr:nth-child(even) {
-    background-color: rgba(0, 15, 50, 0.5);
+    background-color: rgba(84, 154, 171, 0.5);
   }
   .md table.table tr:nth-child(odd) {
-    background-color: rgba(50, 20, 0, 0.5);
+    background-color: rgba(240, 127, 45, 0.5);
   }
 
-  b, em.asterisk {
-    color: rgb(170, 200, 205);
-  }
 }
 
 div.markdeepFooter {
