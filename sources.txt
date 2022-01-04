@@ -1,0 +1,10 @@
+Translation
+    https://www.positronx.io/angular-internationalization-i18n-with-ngx-translate-tutorial/
+    https://poeditor.com/projects/po_edit?id_language=26&per_page=20&id=491423
+
+Lazy Routing
+    https://angular.io/guide/lazy-loading-ngmodules
+
+Read JSON with Angular
+    https://jsonworld.com/demo/how-to-read-local-json-file-in-angular
+

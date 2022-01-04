@@ -1,0 +1,15 @@
+.jow-lecturing-year {
+    font-style: italic;
+}
+
+.jow-lecturing-name {
+    font-weight: bold;
+}
+
+.jow-lecturing-summary {
+    color: var(--jow-red);
+}
+
+.jow-lecturing-tags {
+    display: inline-block;
+}

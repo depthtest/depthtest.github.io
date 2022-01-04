@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row mt-4">
+        <h2 class="jow-titling jow-pub-center-text">{{ publication.title }}</h2>
+        <div class="w-100 jow-pub-center-text">
+            <span class="text-muted jow-publication-authors" *ngFor="let author of publication.authors; let i = index">
+                {{ author }}<span *ngIf="i < publication.authors.length-1">; </span>
+            </span>
+        </div>
+        <div class="d-flex justify-content-center jow-pub-center-text">{{ publication.journal }}</div>
+        <div class="jow-pub-center-text">
+            <span class="jow-pub-data" *ngIf="publication.volume != ''">Vol. {{publication.volume}}, </span>
+            <span class="jow-pub-data" *ngIf="publication.num != ''">Num. {{publication.num}}, </span>
+            <span class="jow-pub-data" *ngIf="publication.pages != ''">pp. {{publication.pages}}, </span>
+            <span class="jow-pub-data" *ngIf="publication.location != ''">{{publication.location}}, </span>
+            {{ publication.year }}
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-lg-6">
+                <!-- MAIN IMAGE-->
+                <div *ngIf="publication.carouselImgs.length == 0" class="d-flex justify-content-center">
+                    <!-- <i class="bi bi-image jow_pub_img"></i> -->
+                    <img class="jow-pub-img" [src]="'assets/img/' + publication.mainImg" >
+                </div>
+                <!-- CAROUSEL -->
+                <div *ngIf="publication.carouselImgs.length > 0">
+                    <div id="publicationCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button *ngFor="let image of publication.carouselImgs; let idx = index;" type="button"
+                                data-bs-target="#publicationCarousel" attr.data-bs-slide-to="{{idx}}"
+                                [ngClass]="{'active': idx == 0}" aria-current="true" attr.aria-label="Slide {{idx + 1}}"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div [ngClass]="{'carousel-item': true, 'active': idx == 0}" *ngFor="let image of publication.carouselImgs, let idx = index">
+                                <!-- <img src="https://images.unsplash.com/photo-1526512340740-9217d0159da9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmVydGljYWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="d-block jow_pub_carousel" alt="..."> -->
+                                <img class="jow_pub_carousel" [src]="'assets/img/' + image" >
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#publicationCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#publicationCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--ARTICLE DATA-->
+            <div class="col-12 col-lg-6">
+                <h5 class="mt-4 jow-subtitling">{{ 'PUBLICATIONS_ABSTRACT_TITLE' | translate }}</h5>
+                <p *ngFor="let paragraph of publication.abstract" class="jow-paragraph"> {{ paragraph }} </p>
+
+
+                <h5 *ngIf="publication.tags.length > 0" class="mt-4 jow-subtitling">{{ 'PUBLICATIONS_KEYWORDS_TITLE' | translate }}</h5>
+                <p>
+                    <span *ngFor="let tag of publication.tags; let idx = index">
+                        {{tag}}<span *ngIf="idx < publication.tags.length-1">, </span>
+                    </span>
+                </p>
+
+                <span *ngIf="publication.url != ''">
+                    <i class="bi bi-link"></i><a target="_blank" href="{{ publication.url }}"> {{ 'PUBLICATIONS_PDF_LINK' |translate }} </a><br/>
+                </span>
+                <i class="bi bi-link"></i><a href="assets/bibtex/{{ publication.id }}.bib"> {{ 'PUBLICATIONS_BIBTEX_LINK' |translate }} </a>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 jow-pub-center-text">
+        <a [routerLink]="['/publications']" [fragment]="publication.id"> <i class="bi bi-arrow-left-circle jow-back-arrow"></i> </a>
+        <!-- <a [routerLink]="['/publications']"> <i class="bi bi-arrow-left-circle jow-back-arrow"></i> </a> -->
+        
+        <!-- <a href="/publications#{{publication.id}}"> <i class="bi bi-arrow-left-circle jow-back-arrow"></i> </a> -->
+        
+        <!-- <a (click)="goBack(u"> <i class="bi bi-arrow-left-circle jow-back-arrow"></i> </a> -->
+    </div>
+
+</div>

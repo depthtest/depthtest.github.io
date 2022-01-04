@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top jow-navbar">
+  <div class="container">
+
+    <!--COLLAPSED MENU-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--LEFT TITLE-->
+    <a class="navbar-brand" [routerLink]="['home']">
+      <h3 class="jow-navbar-brand">
+        Jesús Ojeda Contreras
+        <br class="d-md-none" />
+        <small class="text-muted">{{ 'PHD_TITLE' | translate }}</small>
+      </h3>
+    </a>
+
+    <!--MENU-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a [ngClass]="{'nav-link': true, 'active': navpage == pageEnum.HOME}"
+            data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+            [attr.aria-current]="isCurrentPage(pageEnum.HOME)" [routerLink]="['home']">{{ 'MENU_HOME' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a [ngClass]="{'nav-link': true, 'active': navpage == pageEnum.PUBLICATIONS}"
+            data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+            [attr.aria-current]="isCurrentPage(pageEnum.PUBLICATIONS)" [routerLink]="['publications']">{{
+            'MENU_PUBLICATIONS' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a [ngClass]="{'nav-link': true, 'active': navpage == pageEnum.LECTURING}"
+            data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+            [attr.aria-current]="isCurrentPage(pageEnum.LECTURING)" [routerLink]="['lecturing']">{{ 'MENU_LECTURING' |
+            translate }}</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-translate"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" role="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="changeLanguage(langEnum.CATALAN)">
+                Català <i class="bi bi-check" *ngIf="isCurrentLanguage(langEnum.CATALAN)"></i>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" role="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="changeLanguage(langEnum.SPANISH)">
+                Español <i class="bi bi-check" *ngIf="isCurrentLanguage(langEnum.SPANISH)"></i>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" role="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="changeLanguage(langEnum.ENGLISH)">
+                English <i class="bi bi-check" *ngIf="isCurrentLanguage(langEnum.ENGLISH)"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

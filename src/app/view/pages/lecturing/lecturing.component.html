@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row mt-4">
+        <h2 class="jow-titling">{{ 'CURRENT_LECTURING_GENERAL_TITLE' | translate }}</h2>
+
+        <div class="row" *ngFor="let subject of getSubjectsByType(lecturingType.COURSE, lecturingStatus.CURRENT);" [attr.id]="subject.id">
+            <div class="col-2 text-muted jow-lecturing-year">
+                {{subject.lastYear}}
+            </div>
+            <div class="col-10">
+                <div class="jow-lecturing-name">{{ subject.name | translate }}</div>
+                <div class="text-muted">{{subject.faculty}}, {{subject.university}}</div>
+                <div class="text-muted">{{ 'LECTURING_SINCE' | translate }} {{subject.years[0]}}</div>
+                <div>
+                    <span class="jow-lecturing-summary">{{ 'LECTURING_SUMMARY' | translate }}</span>
+                    <p class="ps-4 mb-0" *ngFor="let paragraph of subject.summary">{{ paragraph | translate }}</p>
+                </div>
+                <div>
+                    <span class="jow-lecturing-summary">{{ 'LECTURING_TAGS' | translate }}</span>
+                    <p class="ps-4">
+                        <span class="jow-lecturing-tags" *ngFor="let tag of subject.tags; let idx = index">
+                            {{tag}}<span *ngIf="idx < subject.tags.length-1">, </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="jow-titling">{{ 'PREVIOUS_LECTURING_GENERAL_TITLE' | translate }}</h2>
+
+        <div class="row" *ngFor="let subject of getSubjectsByType(lecturingType.COURSE, lecturingStatus.PREVIOUS);" [attr.id]="subject.id">
+            <div class="col-2 text-muted jow-lecturing-year">
+                {{subject.lastYear}}
+            </div>
+            <div class="col-10">
+                <div class="jow-lecturing-name">{{ subject.name | translate }}</div>
+                <div class="text-muted">{{subject.faculty}}, {{subject.university}}</div>
+                <div class="text-muted">{{ 'LECTURING_SINCE' | translate }} {{subject.years[0]}}</div>
+                <div>
+                    <span class="jow-lecturing-summary">{{ 'LECTURING_SUMMARY' | translate }}</span>
+                    <p class="ps-4 mb-0" *ngFor="let paragraph of subject.summary">{{ paragraph | translate }}</p>
+                </div>
+                <div>
+                    <span class="jow-lecturing-summary">{{ 'LECTURING_TAGS' | translate }}</span>
+                    <p class="ps-4">
+                        <span class="jow-lecturing-tags" *ngFor="let tag of subject.tags; let idx = index">
+                            {{tag}}<span *ngIf="idx < subject.tags.length-1">, </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="jow-titling">{{ 'SEMINARS_GENERAL_TITLE' | translate }}</h2>
+
+        <div class="row" *ngFor="let subject of getSubjectsByType(lecturingType.SEMINAR, lecturingStatus.CURRENT).concat(getSubjectsByType(lecturingType.SEMINAR, lecturingStatus.PREVIOUS));" [attr.id]="subject.id">
+            <div class="col-2 text-muted jow-lecturing-year">
+                {{subject.lastYear}}
+            </div>
+            <div class="col-10">
+                <div class="jow-lecturing-name">{{ subject.name | translate }}</div>
+                <div class="text-muted">{{subject.faculty}}, {{subject.university}}</div>
+                <div class="text-muted">{{ 'LECTURING_SINCE' | translate }} {{subject.years[0]}}</div>
+                <div>
+                    <span class="jow-lecturing-summary">{{ 'LECTURING_SUMMARY' | translate }}</span>
+                    <p class="ps-4 mb-0" *ngFor="let paragraph of subject.summary">{{ paragraph | translate }}</p>
+                </div>
+                <div>
+                    <span class="jow-lecturing-summary">{{ 'LECTURING_TAGS' | translate }}</span>
+                    <p class="ps-4 mb-0">
+                        <span class="jow-lecturing-tags" *ngFor="let tag of subject.tags; let idx = index">
+                            {{tag}}<span *ngIf="idx < subject.tags.length-1">, </span>
+                        </span>
+                    </p>
+                </div>
+                <p *ngIf="subject.url != ''">
+                    <a target="_blank" href="assets/seminars/{{subject.url}}">{{ 'LECTURING_LINK' | translate }}</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6 mb-4">
+            <div class="d-flex justify-content-center">
+                <!-- <i id="homeImg" class="bi bi-person-bounding-box"></i> -->
+                <img id="homeImg" class="mt-5 mb-5" src="assets/img/jow_profile.jpg" />
+            </div>
+            <h2 class="jow-titling">{{ 'AFFILIATION_TITLE' | translate }}</h2>
+            <hr/>
+            <div class="container">
+                <h4 class="jow-subtitling">{{ affiliation.role_tag | translate }}</h4>
+                {{ affiliation.group }} <br/>
+                {{ affiliation.department }} <br/>
+                {{ affiliation.university }}
+            </div>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <h5 class="jow-subtitling">{{ 'ADDRESS_TITLE' | translate }}</h5>
+                        {{ affiliation.address.faculty }} <br/>
+                        {{ affiliation.address.office | translate }} <br/>
+                        {{ affiliation.address.address }} <br/>
+                        {{ affiliation.address.cp }}, {{ affiliation.address.city }} <br/>
+                        {{ affiliation.address.country | translate }}
+                    </div>
+                    <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                        <h5 class="jow-subtitling">{{ 'CONTACT_TITLE' | translate }}</h5>
+                        {{ affiliation.contact.email }} <br/>
+                        {{ affiliation.contact.phone }} <br/>
+                        <a target="_blank" href="https://www.linkedin.com/in/jesusojeda/"><i class="bi bi-linkedin"></i></a>
+                        <a class="ms-2" target="_blank" href="https://github.com/depthtest"><i class="bi bi-github"></i></a>
+                        <!-- <a class="ms-2" target="_blank" href="https://twitter.com/depthtest"><i class="bi bi-twitter"></i></a> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 mt-4 mb-4">
+            <h2 class="jow-titling">{{ 'BIOGRAPHY_TITLE' | translate }}</h2>
+            <hr/>
+            <p class="jow-paragraph" *ngFor="let paragraph of biography.paragraphs">{{ paragraph | translate }}</p>
+            <h2 class="jow-titling">{{ 'INTERESTS_TITLE' | translate }}</h2>
+            <hr/>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <ul class="list-group border-0">
+                        <div *ngFor="let field of biography.fields; let idx = index;">
+                            <li class="list-group-item border-0" *ngIf="idx%2 == 0">
+                                <i class="bi bi-caret-right-fill text-muted jow-bullet"></i>{{ field | translate }}
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <ul class="list-group border-0">
+                        <div *ngFor="let field of biography.fields; let idx = index;">
+                            <li class="list-group-item border-0" *ngIf="idx%2 == 1">
+                                <i class="bi bi-caret-right-fill text-muted jow-bullet"></i>{{ field | translate }}
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

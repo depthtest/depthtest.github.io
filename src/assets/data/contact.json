@@ -1,0 +1,18 @@
+{
+    "role_tag": "ROLE_TAG",
+    "department": "Departament d'Informàtica i Enginyeria Industrial",
+    "group": "Logic & Optimization Group",
+    "university": "Universitat de Lleida",
+    "address": {
+        "faculty": "Escola Politècnica Superior",
+        "office": "OFFICE_TAG",
+        "address": "C/Jaume II, 69",
+        "cp": "25001",
+        "city": "Lleida",
+        "country": "COUNTRY_TAG"
+    },
+    "contact": {
+        "email": "jesus.ojedacontreras AT udl.cat",
+        "phone": ""
+    }
+}

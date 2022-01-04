@@ -1,0 +1,18 @@
+.jow_pub_carousel {
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+
+.jow-pub-center-text {
+    text-align: center;
+}
+
+.jow-pub-data {
+    display: inline-block;
+}
+
+.jow-pub-img {
+    /*font-size: 100px;*/
+    width: 100%;
+}
