@@ -12,11 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: "16"
-      - uses: cmgriffing/scully-gh-pages-action@v10
-        with:
-          access-token: ${{secrets.CI_DT_GH_IO_TKN}}
-          deploy-branch: production # optional, default is master
+          node-version: "18.16.0"
+      - run: /opt/hostedtoolcache/node/18.16.0/x64/bin/npm install --force
+      - run: /opt/hostedtoolcache/node/18.16.0/x64/bin/npm install -g @angular/cli
+      - run: ng build
+      #- run: ls -la
+      - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{secrets.CI_DT_GH_IO_TKN}}
+        run: bash ./script/publish.sh
+      #- uses: cmgriffing/scully-gh-pages-action@v10
+      #  with:
+      #    access-token: ${{secrets.CI_DT_GH_IO_TKN}}
+      #    deploy-branch: production # optional, default is master

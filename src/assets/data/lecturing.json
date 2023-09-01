@@ -6,7 +6,7 @@
         {
             "id"        : "comptech_udl",
             "name"      : "LECTURE_COMPTECH_UDL_NAME",
-            "years"     : [2020,2021],
+            "years"     : [2020,2021,2022],
             "university": "Universitat de Lleida",
             "faculty"   : "Escola Politècnica Superior",
             "summary"   : ["LECTURE_COMPTECH_UDL_SUMMARY_1"],
@@ -18,7 +18,7 @@
         {
             "id"        : "sec_udl",
             "name"      : "LECTURE_SEC_UDL_NAME",
-            "years"     : [2020,2021],
+            "years"     : [2020,2021,2022],
             "university": "Universitat de Lleida",
             "faculty"   : "Escola Politècnica Superior",
             "summary"   : ["LECTURE_SEC_UDL_SUMMARY_1"],
@@ -30,7 +30,7 @@
         {
             "id"        : "web_udl",
             "name"      : "LECTURE_WEB_UDL_NAME",
-            "years"     : [2021,2022],
+            "years"     : [2021,2022,2023],
             "university": "Universitat de Lleida",
             "faculty"   : "Escola Politècnica Superior",
             "summary"   : ["LECTURE_WEB_UDL_SUMMARY_1"],
@@ -42,7 +42,7 @@
         {
             "id"        : "sisinfo_udl",
             "name"      : "LECTURE_SISINFO_UDL_NAME",
-            "years"     : [2021,2022],
+            "years"     : [2021,2022,2023],
             "university": "Universitat de Lleida",
             "faculty"   : "Escola Politècnica Superior",
             "summary"   : ["LECTURE_SISINFO_UDL_SUMMARY_1"],

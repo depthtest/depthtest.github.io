@@ -32,6 +32,7 @@ export class NavbarComponent implements OnInit {
             if(event.url === "/" || event.url.includes("home")) this.navpage = PageNavigation.HOME;
             else if(event.url.includes("publications")) this.navpage = PageNavigation.PUBLICATIONS;
             else if(event.url.includes("lecturing")) this.navpage = PageNavigation.LECTURING;
+            else if(event.url.includes("professional")) this.navpage = PageNavigation.PROFESSIONAL;
           }
         }
       );

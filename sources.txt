@@ -8,3 +8,27 @@ Lazy Routing
 Read JSON with Angular
     https://jsonworld.com/demo/how-to-read-local-json-file-in-angular
 
+Pagination
+    https://www.npmjs.com/package/ngx-pagination#demo
+    https://openbase.com/categories/js/best-angular-pagination-libraries
+
+
+-----------------------------------------
+Process to update packages version
+	1) Safe update
+		Use npm outdated to discover dependencies that are out of date.
+	    Use npm update to perform safe dependency upgrades.
+	    Use npm install <packagename>@latest to upgrade to the latest major version of a package.
+	2) Breaking Update
+	    Use npx npm-check-updates -u.
+	    npm install to upgrade all dependencies to their latest major versions.
+	    
+From: https://stackoverflow.com/questions/16073603/how-to-update-each-dependency-in-package-json-to-the-latest-version
+
+
+-----------------------------------------
+Current versions
+	- NodeJS: v18.16.0
+	- npm: v9.5.1
+	- Angular:  v16.2.0 (core & cli)
+	- Typescript: v5.1.6

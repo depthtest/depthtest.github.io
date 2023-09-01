@@ -6,10 +6,10 @@
                 <img id="homeImg" class="mt-5 mb-5" src="assets/img/jow_profile.jpg" />
             </div>
             <h2 class="jow-titling">{{ 'AFFILIATION_TITLE' | translate }}</h2>
-            <hr/>
+            <hr class="jow-hline"/>
             <div class="container">
                 <h4 class="jow-subtitling">{{ affiliation.role_tag | translate }}</h4>
-                {{ affiliation.group }} <br/>
+                <span *ngIf="affiliation.group">{{ affiliation.group }}<br/></span>
                 {{ affiliation.department }} <br/>
                 {{ affiliation.university }}
             </div>
@@ -18,7 +18,7 @@
                     <div class="col-12 col-lg-6">
                         <h5 class="jow-subtitling">{{ 'ADDRESS_TITLE' | translate }}</h5>
                         {{ affiliation.address.faculty }} <br/>
-                        {{ affiliation.address.office | translate }} <br/>
+                        <!-- {{ affiliation.address.office | translate }} <br/> -->
                         {{ affiliation.address.address }} <br/>
                         {{ affiliation.address.cp }}, {{ affiliation.address.city }} <br/>
                         {{ affiliation.address.country | translate }}
@@ -37,10 +37,10 @@
         </div>
         <div class="col-12 col-lg-6 mt-4 mb-4">
             <h2 class="jow-titling">{{ 'BIOGRAPHY_TITLE' | translate }}</h2>
-            <hr/>
+            <hr class="jow-hline"/>
             <p class="jow-paragraph" *ngFor="let paragraph of biography.paragraphs">{{ paragraph | translate }}</p>
             <h2 class="jow-titling">{{ 'INTERESTS_TITLE' | translate }}</h2>
-            <hr/>
+            <hr class="jow-hline"/>
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <ul class="list-group border-0">

@@ -1,6 +1,6 @@
 #homeImg {
     /*font-size: 256px;*/
     width: 50%;
-    border: solid 2px var(--jow-red);
+    border: solid 2px var(--jow-primary);
     border-radius: 5%;
 }

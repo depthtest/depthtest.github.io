@@ -5,7 +5,6 @@ import { ViewportScroller } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 
 import { filter } from 'rxjs/operators';
 
@@ -31,7 +30,6 @@ import { FooterComponent } from './view/layout/footer/footer.component';
       }
     }),
     AppRoutingModule,
-    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

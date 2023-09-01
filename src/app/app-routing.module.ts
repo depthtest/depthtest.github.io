@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./view/pages/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'professional',
+    loadChildren: () => import('./view/pages/professional/professional.module').then(m => m.ProfessionalModule)
+  },
+  {
     path: 'publications',
     loadChildren: () => import('./view/pages/publications/publications.module').then(m => m.PublicationsModule)
   },
@@ -18,6 +22,7 @@ const routes: Routes = [
 ];
 
 const routerOptions: ExtraOptions = {
+  useHash: true
   /*useHash: false,
   anchorScrolling:'enabled',
   onSameUrlNavigation: 'reload',*/

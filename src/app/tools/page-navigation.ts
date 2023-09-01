@@ -1,5 +1,6 @@
 export enum PageNavigation {
     HOME,
     PUBLICATIONS,
-    LECTURING
+    LECTURING,
+    PROFESSIONAL
 }

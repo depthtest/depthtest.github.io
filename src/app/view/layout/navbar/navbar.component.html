@@ -25,6 +25,12 @@
             [attr.aria-current]="isCurrentPage(pageEnum.HOME)" [routerLink]="['home']">{{ 'MENU_HOME' | translate }}</a>
         </li>
         <li class="nav-item">
+          <a [ngClass]="{'nav-link': true, 'active': navpage == pageEnum.PROFESSIONAL}"
+            data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+            [attr.aria-current]="isCurrentPage(pageEnum.PROFESSIONAL)" [routerLink]="['professional']">{{
+            'MENU_PROFESSIONAL' | translate }}</a>
+        </li>
+        <li class="nav-item">
           <a [ngClass]="{'nav-link': true, 'active': navpage == pageEnum.PUBLICATIONS}"
             data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
             [attr.aria-current]="isCurrentPage(pageEnum.PUBLICATIONS)" [routerLink]="['publications']">{{

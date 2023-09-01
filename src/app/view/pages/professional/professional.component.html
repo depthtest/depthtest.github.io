@@ -1,14 +1,20 @@
 <div class="container">
     <div class="row mt-4">
-        <h2 class="jow-titling">{{ 'PUBLICATIONS_GENERAL_TITLE' | translate }}</h2>
+        <h2 class="jow-titling">{{ 'PROFESSIONAL_GENERAL_TITLE' | translate }}</h2>
 
-        <div *ngFor="let year of getPublicationYears()">
-            <h5 class="mt-4 jow-subtitling">{{ 'PUBLICATIONS_YEAR_TITLE' | translate }} {{ year }}</h5>
+        <div *ngFor="let position of positions">
+            <h5 class="mt-4 jow-subtitling">{{ position.title | translate }}</h5>
+            <!--<h5 class="mt-4 jow-subtitling">{{ position.inidate | translate }} - {{ position.enddate | translate }}</h5>-->
             <hr class="jow-hline"/>
-            <div *ngFor="let publication of getPublicationsByYear(year)" class="mb-4">
-                <div class="row" [attr.id]="publication.id" #jowPubBinding>
+            <div class="mb-4">
+                <p class="jow-position-data">{{ position.inidate | translate }} - {{ position.enddate | translate }}, {{ position.company | translate }}</p>
+                <div *ngFor="let paragraph of position.description">
+                    <p class="jow-paragraph">{{ paragraph | translate }}</p>
+                </div>
+                <h6 *ngIf="position.skills.length>0" class="jow-subsubtitling">{{ 'PROFESSIONAL_SKILLS_TITLE' | translate }}</h6>
+                <span *ngFor="let skill of position.skills; let idx = index">{{ skill | translate }} <span *ngIf="idx<position.skills.length-1">, </span> </span>
+                <!--<div class="row" [attr.id]="publication.id" #jowPubBinding>
                     <div class="col-2 jow-img-div" [routerLink]="['/publications', publication.id]">
-                        <!-- <i class="bi bi-image jow_pub_img"></i> -->
                         <img class="jow-pub-img" [src]="'assets/img/' + publication.mainImg" >
                     </div>
                     <div class="col-10">
@@ -26,7 +32,7 @@
                         </span>
                         <i class="bi bi-link"></i><a href="assets/bibtex/{{ publication.id }}.bib" style="z-index: 1;"> {{ 'PUBLICATIONS_BIBTEX_LINK' |translate }} </a>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
