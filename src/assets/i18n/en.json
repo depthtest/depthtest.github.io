@@ -59,14 +59,14 @@
     "PROFESSIONAL_COMPANY4_TAG": "Polytechnic University of Catalonia (UPC)",
     "PROFESSIONAL_INIDATE4_TAG": "January 2009",
     "PROFESSIONAL_ENDDATE4_TAG": "January 2013",
-    "PROFESSIONAL_DESCRIPTION4_TAG": "Research and development of real-time fluid simulations for my PhD. The main motivation for the project resided in the complexity in existing physical simulations and more specifically fluid simulations, for interactive applications such as video games. The implemented prototypes were developed with C++, OpenMP and CUDA for simulations, OpenGL for interactive visualizations and everything within Qt for user interfaces on Linux systems. During this time, 3 publications were madein national and international conferences, as well as the defense of the thesis in May 2013. Funding from the Agència de Gestió d'Ajuts Universitaris i de Recerca of the Generalitat de Catalunya and the Polytechnic University of Catalonia.",
+    "PROFESSIONAL_DESCRIPTION4_TAG": "Research and development of real-time fluid simulations for my PhD. The main motivation for the project resided in the complexity in existing physical simulations and more specifically fluid simulations, for interactive applications such as video games. The implemented prototypes were developed with C++, OpenMP and CUDA for simulations, OpenGL for interactive visualizations and everything within Qt for user interfaces on Linux systems. During this time, 3 publications were made in national and international conferences, as well as the defense of the thesis in May 2013. Funding from the Agència de Gestió d'Ajuts Universitaris i de Recerca of the Generalitat de Catalunya and the Polytechnic University of Catalonia.",
 
     "_comment3.5": "PROFESSIONAL POSITION 5 - RESEARCH ENGINEER",
     "PROFESSIONAL_POSITION5_TAG": "R&D Engineer",
     "PROFESSIONAL_COMPANY5_TAG": "Mediapro",
     "PROFESSIONAL_INIDATE5_TAG": "February 2014",
     "PROFESSIONAL_ENDDATE5_TAG": "July 2015",
-    "PROFESSIONAL_DESCRIPTION5_TAG": "Mediacoach project. My tasks ranged from implementing new features and improving the existing code base to managing new versions of the application. The project is built with C++, C# and Qt for MS Windows environments.",
+    "PROFESSIONAL_DESCRIPTION5_TAG": "Mediacoach project. My tasks ranged from implementing new features and improving the existing code base to managing new versions of the application. The project was built with C++, C# and Qt for MS Windows environments.",
 
     "_comment3.6": "PROFESSIONAL POSITION 6 - PROFESSOR ASSITANT IN DEEP LEARNING",
     "PROFESSIONAL_POSITION6_TAG": "Teaching Assistant in Deep Learning",
@@ -80,7 +80,7 @@
     "PROFESSIONAL_COMPANY7_TAG": "College of New Technologies - University of Barcelona (ENTI-UB)",
     "PROFESSIONAL_INIDATE7_TAG": "February 2017",
     "PROFESSIONAL_ENDDATE7_TAG": "July 2019",
-    "PROFESSIONAL_DESCRIPTION7_TAG": "Teaching in the physics and graphics courses in the VideoGame Development Degree.",
+    "PROFESSIONAL_DESCRIPTION7_TAG": "Teaching in the Physics and Computer Graphics courses in the VideoGame Development Degree.",
 
     "_comment3.8": "PROFESSIONAL POSITION 8 - SENIOR SOFTWARE ENGINIER",
     "PROFESSIONAL_POSITION8_TAG": "Senior Software Engineer",
@@ -94,7 +94,7 @@
     "PROFESSIONAL_COMPANY9_TAG": "University of Lleida (UdL)",
     "PROFESSIONAL_INIDATE9_TAG": "September 2018",
     "PROFESSIONAL_ENDDATE9_TAG": "Currently",
-    "PROFESSIONAL_DESCRIPTION9_TAG": "Research in Machine Learning, Constraint Programming and Optimization. Various publications on Combinatorial Testing and Process Mining applications. I developed crop classification and rice monitoring projects from satellite images within the frameworkof CAP subsidies (contract with the Generalitat de Catalunya). In this context, I also created adocker image for downloading and processing ESA Copernicus satellite images (in use by Vunkers).During this time I have also taught both in Igualada and Lleida, at the Bachelor's and Master's levelin Computer Science, in the courses of Security, Web Project, Algorithmics, Information Systems(ERP, SCM, CRM), Artificial Intelligence and Mobile Game Development.",
+    "PROFESSIONAL_DESCRIPTION9_TAG": "Research in Machine Learning, Constraint Programming and Optimization. Various publications on Combinatorial Testing and Process Mining applications. I developed crop classification and rice monitoring projects from satellite images within the framework of CAP subsidies (contract with the Generalitat de Catalunya). In this context, I also created a docker image for downloading and processing ESA Copernicus satellite images (in use by Vunkers). During this time I have also taught both at Igualada and Lleida, at the Bachelor's and Master's level in Computer Science, in the courses of Security, Web Project, Algorithmics, Information Systems (ERP, SCM, CRM), Artificial Intelligence and Mobile Game Development.",
 
     "_comment3.10": "PROFESSIONAL SKILLS",
     "PROFESSIONAL_SKILL_C++":"C++",
