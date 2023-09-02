@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+body {
+    font-family: 'Roboto';
+    padding-top: 65px;
+    padding-bottom: 30px;
+}
+
+span {
+    white-space: pre;
+}
+
+.jow-hline{
+    height: 5px;
+    background-color: var(--jow-secondary);
+    border: none;
+}
+
+.jow-navbar, .jow-footer {
+    /*background-color: var(--bs-gray-200);*/
+    background-color: var(--jow-background);
+}
+
+.jow-navbar-brand, .jow-footer-brand {
+    color: var(--jow-primary);
+}
+
+.jow-titling {
+    color: var(--jow-primary);
+}
+
+.jow-subtitling {
+    color: var(--jow-primary);
+    font-style: italic;
+}
+
+.jow-subsubtitling {
+    font-weight: bold;
+}
+
+.jow-paragraph {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.jow-bullet {
+    margin-right: 0.5em;
+}
+
+.jow-position-data {
+    font-style: italic;
+}
+
+.jow-publication-title {
+    font-weight: bold;
+}
+
+.jow-publication-authors {
+    font-style: italic;
+    display: inline-block;
+}
+
+.jow-cursor-pointer{
+    cursor: pointer;
+}
+
+.jow-back-arrow {
+    font-size: 24px;
+}

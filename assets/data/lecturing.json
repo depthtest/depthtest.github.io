@@ -1,0 +1,151 @@
+{
+    "type": ["seminar", "course"],
+    "status": ["current", "previous"],
+    "tags": ["Computer Graphics", "Artificial Intelligence"],
+    "subjects": [
+        {
+            "id"        : "comptech_udl",
+            "name"      : "LECTURE_COMPTECH_UDL_NAME",
+            "years"     : [2020,2021,2022],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_COMPTECH_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Algorithmics", "Computer Science"],
+            "type"      : "course",
+            "status"    : "current"
+        },
+        {
+            "id"        : "sec_udl",
+            "name"      : "LECTURE_SEC_UDL_NAME",
+            "years"     : [2020,2021,2022],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_SEC_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Mathematics", "Operations"],
+            "type"      : "course",
+            "status"    : "current"
+        },
+        {
+            "id"        : "web_udl",
+            "name"      : "LECTURE_WEB_UDL_NAME",
+            "years"     : [2021,2022,2023],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_WEB_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Information Systems"],
+            "type"      : "course",
+            "status"    : "current"
+        },
+        {
+            "id"        : "sisinfo_udl",
+            "name"      : "LECTURE_SISINFO_UDL_NAME",
+            "years"     : [2021,2022,2023],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_SISINFO_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Information Systems"],
+            "type"      : "course",
+            "status"    : "current"
+        },
+        {
+            "id"        : "nummeths_udl",
+            "name"      : "LECTURE_NUMMETHS_UDL_NAME",
+            "years"     : [2019],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_NUMMETHS_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Mathematics"],
+            "type"      : "course",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "videog_udl",
+            "name"      : "LECTURE_VIDEOG_UDL_NAME",
+            "years"     : [2018,2019],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_VIDEOG_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Computer Graphics"],
+            "type"      : "course",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "ai_udl",
+            "name"      : "LECTURE_AI_UDL_NAME",
+            "years"     : [2018,2019],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_AI_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Artificial Intelligence"],
+            "type"      : "course",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "algebra_udl",
+            "name"      : "LECTURE_ALGEBRA_UDL_NAME",
+            "years"     : [2009],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_ALGEBRA_UDL_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Mathematics"],
+            "type"      : "course",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "cg_enti",
+            "name"      : "LECTURE_CG_ENTI_NAME",
+            "years"     : [2016,2017,2018],
+            "university": "Universitat de Barcelona",
+            "faculty"   : "Escola de Noves Tecnologies de Interacció",
+            "summary"   : ["LECTURE_CG_ENTI_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Computer Graphics"],
+            "type"      : "course",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "physics_enti",
+            "name"      : "LECTURE_PHYSICS_ENTI_NAME",
+            "years"     : [2016,2017,2018],
+            "university": "Universitat de Barcelona",
+            "faculty"   : "Escola de Noves Tecnologies de Interacció",
+            "summary"   : ["LECTURE_PHYSICS_ENTI_SUMMARY_1"],
+            "url"       : "",
+            "tags"      : ["Physics","Computer Graphics"],
+            "type"      : "course",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "seminar_170100_dnn",
+            "name"      : "LECTURE_SEMINAR_DNN_UDL_NAME",
+            "years"     : [2017],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_SEMINAR_DNN_UDL_SUMMARY_1"],
+            "url"       : "slides_170100_neural_index.html",
+            "tags"      : ["Artificial Intelligence", "Neural Network"],
+            "type"      : "seminar",
+            "status"    : "previous"
+        },
+        {
+            "id"        : "seminar_161100_tf",
+            "name"      : "LECTURE_SEMINAR_TF_UDL_NAME",
+            "years"     : [2016],
+            "university": "Universitat de Lleida",
+            "faculty"   : "Escola Politècnica Superior",
+            "summary"   : ["LECTURE_SEMINAR_TF_UDL_SUMMARY_1"],
+            "url"       : "slides_161100_tf_index.html",
+            "tags"      : ["Artificial Intelligence", "Neural Network"],
+            "type"      : "seminar",
+            "status"    : "previous"
+        }
+    ]
+}

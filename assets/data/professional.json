@@ -1,0 +1,76 @@
+{
+    "positions": [
+        {
+            "title": "PROFESSIONAL_POSITION1_TAG",
+            "company": "PROFESSIONAL_COMPANY1_TAG",
+            "inidate": "PROFESSIONAL_INIDATE1_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE1_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION1_TAG"],
+            "skills": []
+        },
+        {
+            "title": "PROFESSIONAL_POSITION2_TAG",
+            "company": "PROFESSIONAL_COMPANY2_TAG",
+            "inidate": "PROFESSIONAL_INIDATE2_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE2_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION2_TAG"],
+            "skills": []
+        },
+        {
+            "title": "PROFESSIONAL_POSITION3_TAG",
+            "company": "PROFESSIONAL_COMPANY3_TAG",
+            "inidate": "PROFESSIONAL_INIDATE3_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE3_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION3_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_C++", "PROFESSIONAL_SKILL_QT", "PROFESSIONAL_SKILL_OPENGL"]
+        },
+        {
+            "title": "PROFESSIONAL_POSITION4_TAG",
+            "company": "PROFESSIONAL_COMPANY4_TAG",
+            "inidate": "PROFESSIONAL_INIDATE4_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE4_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION4_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_C++", "PROFESSIONAL_SKILL_QT", "PROFESSIONAL_SKILL_CUDA", "PROFESSIONAL_SKILL_OPENGL", "PROFESSIONAL_SKILL_OPENMP"]
+        },
+        {
+            "title": "PROFESSIONAL_POSITION5_TAG",
+            "company": "PROFESSIONAL_COMPANY5_TAG",
+            "inidate": "PROFESSIONAL_INIDATE5_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE5_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION5_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_C++", "PROFESSIONAL_SKILL_C#", "PROFESSIONAL_SKILL_FFMPEG", "PROFESSIONAL_SKILL_SOAP", "PROFESSIONAL_SKILL_QT", "PROFESSIONAL_SKILL_MYSQL"]
+        },
+        {
+            "title": "PROFESSIONAL_POSITION6_TAG",
+            "company": "PROFESSIONAL_COMPANY6_TAG",
+            "inidate": "PROFESSIONAL_INIDATE6_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE6_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION6_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_PYTHON", "PROFESSIONAL_SKILL_TENSORFLOW", "PROFESSIONAL_SKILL_PYTORCH", "PROFESSIONAL_SKILL_NUMPY", "PROFESSIONAL_SKILL_PANDAS"]
+        },
+        {
+            "title": "PROFESSIONAL_POSITION7_TAG",
+            "company": "PROFESSIONAL_COMPANY7_TAG",
+            "inidate": "PROFESSIONAL_INIDATE7_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE7_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION7_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_C++", "PROFESSIONAL_SKILL_OPENGL"]
+        },
+        {
+            "title": "PROFESSIONAL_POSITION8_TAG",
+            "company": "PROFESSIONAL_COMPANY8_TAG",
+            "inidate": "PROFESSIONAL_INIDATE8_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE8_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION8_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_C++", "PROFESSIONAL_SKILL_C#", "PROFESSIONAL_SKILL_OPENGL", "PROFESSIONAL_SKILL_UNITY3D", "PROFESSIONAL_SKILL_ITK", "PROFESSIONAL_SKILL_VTK", "PROFESSIONAL_SKILL_MITK", "PROFESSIONAL_SKILL_WXWIDGETS"]
+        },
+        {
+            "title": "PROFESSIONAL_POSITION9_TAG",
+            "company": "PROFESSIONAL_COMPANY9_TAG",
+            "inidate": "PROFESSIONAL_INIDATE9_TAG",
+            "enddate": "PROFESSIONAL_ENDDATE9_TAG",
+            "description": ["PROFESSIONAL_DESCRIPTION9_TAG"],
+            "skills": ["PROFESSIONAL_SKILL_C++", "PROFESSIONAL_SKILL_PYTHON", "PROFESSIONAL_SKILL_DOCKER", "PROFESSIONAL_SKILL_GIS", "PROFESSIONAL_SKILL_POSTGRESQL", "PROFESSIONAL_SKILL_PYTORCH", "PROFESSIONAL_SKILL_NUMPY", "PROFESSIONAL_SKILL_PANDAS", "PROFESSIONAL_SKILL_SCIKITLEARN"]
+        }
+    ]
+}

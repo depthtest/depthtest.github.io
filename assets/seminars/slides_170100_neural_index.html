@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Neural Nets</title>
+
+<link rel="stylesheet" href="revealjs/css/reveal.css">
+<link rel="stylesheet" href="revealjs/css/theme/league.css">
+<link rel="stylesheet" href="content/170100_neural_rsc/neural.css">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</head>
+
+<body>
+
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<h1>Neural Networks</h1>
+			<h3>Theory and Practice</h3>
+			<p><small>January 2017</small></p>
+		</section>
+
+		<section>
+			<img src="content/profile.jpg" style=" max-width:250px; float: left;"/>
+			<h2>Jesus Ojeda</h2>
+			<ul>
+				<li>BSc &amp; MSc @ UdL</li>
+				<li>Computing PhD @ UPC</li>
+				<li>Medical Imaging @ Galgo Medical</li>
+				<li><a href="https://twitter.com/depthtest">@depthtest</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Content</h3>
+			<ol>
+				<li><a href="#/4/">Background</a></li>
+				<li><a href="#/5/">Theory</a></li>
+				<li><a href="#/6/">Basic Network Kinds</a></li>
+				<li><a href="#/7/">Some Examples</a></li>
+				<li><a href="#/9/">Frameworks</a></li>
+			</ol>
+		</section>
+
+		<section>
+			<section>
+				<h3>Context</h3>
+				<img src="content/170100_neural_rsc/venn.svg" style="border:0px; width:60%; background:initial; box-shadow:none;"/>
+			</section>
+			<section>
+				<h3>Neuroscience Background</h3>
+				<img src="content/170100_neural_rsc/neuron.svg" style="border:0px; width:80%; background:initial; box-shadow:none;"/>
+			</section>
+			<section>
+				<h3>The Perceptron</h3>
+				<img src="content/170100_neural_rsc/perceptron.png"/>
+			</section>
+			<section>
+				<img src="content/170100_neural_rsc/perceptron.png" style="max-width: 400px;"/>
+				<p>$$g(in_j) = \begin{cases}1,& in_j > 0\\0,& otherwise\\ \end{cases}$$</p>
+				<p>$$ in_j=\sum^n_{i=0} w_{i,j}a_i$$<p>
+			</section>
+			<section>
+				<h3>Hands-on: the AND operator / logic gate</h3>
+				<div style="float:right">
+					<p>$$g(w_A A + w_B B + w_0) = A·B$$</p> <br/>
+					<p class = "fragment">$$w_A A + w_B B + w_0 > 0$$</p> <br/>
+					<p class = "fragment">
+					$$w_A = 0.6$$
+					$$w_B = 0.6$$
+					$$w_0 = -1$$
+					<p>
+				</div>
+				<div>
+				<img src="content/170100_neural_rsc/and.svg" style="border:0px; width: 30%;background:initial; box-shadow:none;"/>
+				<table>
+					<thead>
+						<th>A</th>
+						<th>B</th>
+						<th>A·B</th>
+					</thead>
+					<tr><td>0</td><td>0</td><td style="text-align: center;">0</td></tr>
+					<tr><td>0</td><td>1</td><td style="text-align: center;">0</td></tr>
+					<tr><td>1</td><td>0</td><td style="text-align: center;">0</td></tr>
+					<tr><td>1</td><td>1</td><td style="text-align: center;">1</td></tr>
+				</table>
+				</div>
+				<p class="fragment">Homework! Create some other logic gates. <span class="fragment">Just kidding!</span></p>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h3>Neural Networks</h3>
+				<ul>
+					<li>Connecting neurons in a network
+					<img src="content/170100_neural_rsc/neural_net2.jpeg" style="width: 40%; float:right;"/>
+					</li>
+					<li>Can model any function</li>
+					<li class="fragment">Different activation functions:
+						<ul>
+							<li>Hard-threshold : perceptron </li>
+							<li>Logistic function : sigmoid, tanh, REctified Linear Unit, ... </li>
+						</ul>
+						<span class="fragment" style="color:lightgreen;">These add non-linearities! <span class="fragment">And are (mostly) differentiable!</span></span>
+					</li>
+					<li class="fragment">We need a loss/error/energy function to minimize, i.e. $$Loss(\mathbf{w}) = |\mathbf{y} - \mathbf{h}(\mathbf{x})|^2 $$<br/><span class="fragment" style="color:lightcoral">Learning is (mostly) about minimizing error!</span></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Gradient descent</h3>
+				<img src="content/170100_neural_rsc/neural_net2.jpeg" style="width: 30%; float:right;"/>
+				<img src="content/170100_neural_rsc/ball.png" style="width:60%;"/>
+				$$\mathbf{w_{k+1}} = \mathbf{w_k} - \lambda \nabla Loss(\mathbf{w_k})$$
+			</section>
+			<section>
+				<h3>Backpropagation</h3>
+				<h4>a.k.a. Let's apply Calculus Chain Rule!</h4>
+				<img src="content/170100_neural_rsc/neural_net_backprop.jpeg" style="width: 80%;"/> <br/>
+				<i>Propagate</i> the loss <i>back</i> from $H$ to the inputs $X_{*}$, updating the weights $\mathbf{w}$ between neurons on the way.
+			</section>
+			<section>
+				<h3>Backpropagation (2)</h3>
+				<div>
+				<img src="content/170100_neural_rsc/neural_net_backprop_H.jpeg" style="width: 25%;position:absolute;top:0;right:0;"/>
+				</div>
+				<br/>
+				$$\nabla Loss(\mathbf{w}_H) = \frac{\partial Loss}{\partial \mathbf{w}_{Hb_i, H}}$$
+			</section>
+			<section>
+				<h3>Backpropagation (3)</h3>
+				<div>
+				<img src="content/170100_neural_rsc/neural_net_backprop_Hb0.jpeg" style="width: 25%;position:absolute;top:0;right:0;"/>
+				<img src="content/170100_neural_rsc/neural_net_backprop_Hb1.jpeg" style="width: 25%;position:absolute;top:0;right:0;" class="fragment" data-fragment-index="1"/>
+				<img src="content/170100_neural_rsc/neural_net_backprop_Hb2.jpeg" style="width: 25%;position:absolute;top:0;right:0;" class="fragment" data-fragment-index="2"/>
+				<img src="content/170100_neural_rsc/neural_net_backprop_Hb3.jpeg" style="width: 25%;position:absolute;top:0;right:0;" class="fragment" data-fragment-index="3"/>
+				</div>
+				<br/>
+				$$\nabla Loss(\mathbf{w}_{Hb_0}) = \frac{\partial Loss}{\partial w_{Hb_0, H}} \frac{\partial w_{Hb_0, H}}{\partial \mathbf{w}_{Ha_i, Hb_0}}$$
+				<span class="fragment" data-fragment-index="1">$$\nabla Loss(\mathbf{w}_{Hb_1}) = \frac{\partial Loss}{\partial w_{Hb_1, H}} \frac{\partial w_{Hb_1, H}}{\partial \mathbf{w}_{Ha_i, Hb_1}}$$</span>
+				<span class="fragment" data-fragment-index="2">$$\nabla Loss(\mathbf{w}_{Hb_2}) = \frac{\partial Loss}{\partial w_{Hb_2, H}} \frac{\partial w_{Hb_2, H}}{\partial \mathbf{w}_{Ha_i, Hb_2}}$$</span>
+				<span class="fragment" data-fragment-index="3">$$\nabla Loss(\mathbf{w}_{Hb_3}) = \frac{\partial Loss}{\partial w_{Hb_3, H}} \frac{\partial w_{Hb_3, H}}{\partial \mathbf{w}_{Ha_i, Hb_3}}$$</span>
+			</section>
+			<section>
+				<h3>Backpropagation (4)</h3>
+				<div>
+				<img src="content/170100_neural_rsc/neural_net_backprop_Ha0.jpeg" style="width: 25%;position:absolute;top:0;right:0;"/>
+				</div>
+				<br/>
+				$$\begin{aligned}
+					\small \nabla Loss(\mathbf{w}_{Ha_0}) = \\ 
+					\small \frac{\partial }{\partial \mathbf{w}_{X_i,Ha_0}} & \left(
+					\small\frac{\partial Loss}{\partial w_{Hb_0, H}} \frac{\partial w_{Hb_0, H}}{\partial w_{Ha_0, Hb_0}} + 
+						\frac{\partial Loss}{\partial w_{Hb_1, H}} \frac{\partial w_{Hb_1, H}}{\partial w_{Ha_0, Hb_1}} + \right.\\
+					&\left. \small \frac{\partial Loss}{\partial w_{Hb_2, H}} \frac{\partial w_{Hb_2, H}}{\partial w_{Ha_0, Hb_2}} + 
+						\frac{\partial Loss}{\partial w_{Hb_3, H}} \frac{\partial w_{Hb_3, H}}{\partial w_{Ha_0, Hb_3}} \right)
+				\end{aligned}$$
+			</section>
+			<section>
+				<h3>Backpropagation (5)</h3>
+				<h4>even to check about input dependency</h4>
+				<div>
+				<img src="content/170100_neural_rsc/neural_net_backprop_X0.jpeg" style="width: 25%;position:absolute;top:0;right:0;"/>
+				</div>
+				$$\begin{aligned}
+					\tiny \nabla Loss(X_0) = \tiny \frac{\partial }{\partial X_0} & \tiny \Big( \\
+
+
+					\tiny \frac{\partial }{\partial \mathbf{w}_{X_i,Ha_0}} & \tiny \left(
+						\frac{\partial Loss}{\partial w_{Hb_0, H}} \frac{\partial w_{Hb_0, H}}{\partial w_{Ha_0, Hb_0}} + 
+						\frac{\partial Loss}{\partial w_{Hb_1, H}} \frac{\partial w_{Hb_1, H}}{\partial w_{Ha_0, Hb_1}} +
+						\frac{\partial Loss}{\partial w_{Hb_2, H}} \frac{\partial w_{Hb_2, H}}{\partial w_{Ha_0, Hb_2}} + 
+						\frac{\partial Loss}{\partial w_{Hb_3, H}} \frac{\partial w_{Hb_3, H}}{\partial w_{Ha_0, Hb_3}} \right) + \\
+					
+					\tiny \frac{\partial }{\partial \mathbf{w}_{X_i,Ha_1}} & \tiny \left(
+						\frac{\partial Loss}{\partial w_{Hb_0, H}} \frac{\partial w_{Hb_0, H}}{\partial w_{Ha_1, Hb_0}} + 
+						\frac{\partial Loss}{\partial w_{Hb_1, H}} \frac{\partial w_{Hb_1, H}}{\partial w_{Ha_1, Hb_1}} +
+						\frac{\partial Loss}{\partial w_{Hb_2, H}} \frac{\partial w_{Hb_2, H}}{\partial w_{Ha_1, Hb_2}} + 
+						\frac{\partial Loss}{\partial w_{Hb_3, H}} \frac{\partial w_{Hb_3, H}}{\partial w_{Ha_1, Hb_3}} \right) + \\
+
+					\tiny \frac{\partial }{\partial \mathbf{w}_{X_i,Ha_2}} & \tiny \left(
+						\frac{\partial Loss}{\partial w_{Hb_0, H}} \frac{\partial w_{Hb_0, H}}{\partial w_{Ha_2, Hb_0}} + 
+						\frac{\partial Loss}{\partial w_{Hb_1, H}} \frac{\partial w_{Hb_1, H}}{\partial w_{Ha_2, Hb_1}} +
+						\frac{\partial Loss}{\partial w_{Hb_2, H}} \frac{\partial w_{Hb_2, H}}{\partial w_{Ha_2, Hb_2}} + 
+						\frac{\partial Loss}{\partial w_{Hb_3, H}} \frac{\partial w_{Hb_3, H}}{\partial w_{Ha_2, Hb_3}} \right) + \\
+
+					\tiny \frac{\partial }{\partial \mathbf{w}_{X_i,Ha_3}} & \tiny \left(
+						\frac{\partial Loss}{\partial w_{Hb_0, H}} \frac{\partial w_{Hb_0, H}}{\partial w_{Ha_3, Hb_0}} + 
+						\frac{\partial Loss}{\partial w_{Hb_1, H}} \frac{\partial w_{Hb_1, H}}{\partial w_{Ha_3, Hb_1}} +
+						\frac{\partial Loss}{\partial w_{Hb_2, H}} \frac{\partial w_{Hb_2, H}}{\partial w_{Ha_3, Hb_2}} + 
+						\frac{\partial Loss}{\partial w_{Hb_3, H}} \frac{\partial w_{Hb_3, H}}{\partial w_{Ha_3, Hb_3}} \right)
+					\Big)
+				\end{aligned}$$
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Types of Architectures</h2>
+			</section>
+			<section>
+				<h3>Feed-Forward neural networks</h3>
+				<img src="content/170100_neural_rsc/neural_net2.jpeg" style="width: 60%"/>
+			</section>
+			<section>
+				<h3>Convolutional neural networks</h3>
+				<img src="content/170100_neural_rsc/Typical_cnn.png"/>
+			</section>
+			<section>
+				<h3>Recurrent neural networks</h3>
+				<img src="content/170100_neural_rsc/Typical_recurrent.png"/>
+			</section>
+			<section>
+				<h3><a href="http://www.asimovinstitute.org/neural-network-zoo/">Model zoo</a></h3>
+				<img src="content/161100_tf_rsc/NN_chart.jpeg" style="width: 40%"/>
+			</section>
+		</section>
+
+		<section data-background="content/161100_tf_rsc/different.jpg">
+			<h2>and now for something completely different</h2>
+		</section>
+
+		<section>
+			<section>
+				<h3><a href="https://github.com/google/deepdream">DeepDream</a></h3>
+				<img src="content/170100_neural_rsc/deepdreaming.jpg" style="width:80%"/>
+			</section>
+			<section>
+				<h3><a href="https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html"> Google Translate </a></h3>
+				<img src="content/170100_neural_rsc/translate.png" style="width:80%"/>
+			</section>
+			<section>
+			<h3><a href="https://github.com/alexjc/neural-doodle">NeuralDoodle</a></h3>
+			<div class="image-slider">
+				<div><img src="content/170100_neural_rsc/Renoir6_gen.jpg" /></div>
+				<img src="content/170100_neural_rsc/Renoir6_social.png" />
+			</div>
+			</section>
+			<section>
+			<h3><a href="https://github.com/alexjc/neural-enhance">NeuralEnhance</a></h3>
+			<img src="content/170100_neural_rsc/neuralenhance_1.gif" style="width: 50%"/>
+			<img src="content/170100_neural_rsc/neuralenhance_2.gif" style="width: 50%"/>
+			<img src="content/170100_neural_rsc/neuralenhance_3.gif" style="width: 50%"/>
+			</section>
+			<section>
+				<h3>Self-driving</h3>
+				<img src="content/170100_neural_rsc/tesla_autopilot.jpg" style="width:40%; position:absolute;bottom:0;left:0;z-index:-1;"/>
+				<img src="content/170100_neural_rsc/Self-Driving-Uber.png" style="width:37%; position:absolute;bottom:0;right:0;z-index:-1;"/>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/qhUvQiKec2U" frameborder="0" allowfullscreen></iframe>
+				<br/>
+				<br/>
+			</section>
+			<section>
+				<h3><a href="http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html">Playing Atari</a></h3>
+				<img src="content/170100_neural_rsc/dqn.png" >
+				<div class="fragment" style="position: absolute; left:20%; top: 32%;">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/TmPfTpjtdgg" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</section>
+			<section>
+				<h3><a href="https://arxiv.org/pdf/1508.01211v2.pdf">Listen, Attend, Spell</a></h3>
+				<img src="content/170100_neural_rsc/listen_attend_spell.png" style="width:60%"/>
+			</section>
+			<section>
+			<h3>Medical Imaging Segmentation</h3>
+			<img src="content/170100_neural_rsc/medimg_class.png" style="width:80%"/>
+			</section>
+		</section>
+
+		<section>
+			<h2>You get a framework, and you get a framework...</h2>
+				<ul>
+					<li><a href="https://github.com/BVLC/caffe">Caffe</a></li>
+					<li><a href="https://github.com/Theano/Theano">Theano</a></li>
+					<li><a href="https://www.tensorflow.org/">Tensorflow (Google)</a></li>
+					<li><a href="https://github.com/torch/torch7">Torch (Facebook)</a></li>
+					<li><a href="https://github.com/baidu/Paddle">PaddlePaddle (Baidu)</a></li>
+					<li><a href="https://github.com/Microsoft/CNTK">CNTK (Microsoft)</a></li>
+					<li><a href="https://github.com/dmlc/mxnet">MXNet (Amazon)</a></li>
+					<li>Many more...</li>
+				</ul>
+				<div class="fragment" style="position:absolute; top:30%; left: 16%; z-index: -1;">
+					<img src="content/170100_neural_rsc/yougetacar.jpg"/>
+				</div>
+		</section>
+
+		<section>
+			<h2>FIN</h2>
+		</section>
+	</div>
+</div>
+
+<script src="revealjs/lib/js/head.min.js"></script>
+<script src="revealjs/js/reveal.js"></script>
+<script> //Reveal init
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+		// Optional configuration:
+		math: {
+			katexScript:     'revealjs/plugin/math-katex/lib/katex-0.11.1/katex.min.js',
+			katexStylesheet: 'revealjs/plugin/math-katex/lib/katex-0.11.1/katex.min.css'
+		},
+		dependencies: [
+		{ src: 'revealjs/plugin/math-katex/math-katex.js', async: true },
+		{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+		]
+	});
+</script>
+</body>
+
+</html>
