@@ -16,9 +16,9 @@
     "BIOGRAPHY_TITLE": "Biografia",
     "INTERESTS_TITLE": "Interessos en recerca",
     "BIOGRAPHY": {
-        "PARAGRAPH1_TAG":  "Actualment sóc investigador a la Universitat de Lleida (UdL), treballant en programació de restriccions i algorismes d'aprenentatge automàtic i les seves aplicacions, alhora que imparteixo classes sobre Seguretat, Web, Computació i Intel·ligència Artificial. Les meves experiències prèvies han inclòs la docència de Física i Informàtica Gràfica a l'Escola de Noves Tecnologies Interactives de la Universitat de Barcelona (ENTI-UB) i el treball en imatge mèdica en aplicacions en temps real a Galgo Medical i programari d'anàlisi de vídeo per a l'entrenament al futbol a Mediapro, tant com a enginyer de programari sènior com enginyer de recerca.",
-        "PARAGRAPH2_TAG": "Prèviament vaig rebre el l'Enginyeria Tècnica en Informàtica de Gestió i el Màster en Programari Lliure per la Universitat de Lleida els anys 2006 i 2008, respectivament. Després vaig obtenir el Doctorat en Computació a la Universitat Politècnica de Catalunya (UPC) el maig de 2013, mentre estava als grups de recerca MOVING i ViRVIG. Em vaig centrar en la simulació i visualització de fluids en temps real, utilitzant el mètode Lattice Boltzmann a CUDA i OpenGL amb efectes visuals en temps real.",
-        "PARAGRAPH3_TAG": "Els meus coneixements no es limiten només a la meva investigació, ja que sempre en busco més, i segurament em trobareu llegint nous articles i llibres sobre noves tecnologies que sorgeixen, ja que els meus interessos de recerca van des de l'animació física i la visualització fins a la programació de GPU, aprenentatge automàtic, intel·ligència artificial i optimització."
+        "PARAGRAPH1_TAG":  "Actualment sóc investigador a la Universitat de Lleida (UdL), treballant en programació de restriccions i algorismes d'aprenentatge automàtic i les seves aplicacions, alhora que imparteixo classes sobre Seguretat, Web, Computació i Intel·ligència Artificial. Les meves experiències prèvies han inclòs la docència de Física i Informàtica Gràfica a l'Escola de Noves Tecnologies Interactives de la Universitat de Barcelona (ENTI-UB), el treball en imatge mèdica en aplicacions en temps real a Galgo Medical i programari d'anàlisi de vídeo per a l'entrenament al futbol a Mediapro, tant com a enginyer de programari sènior com enginyer de recerca.",
+        "PARAGRAPH2_TAG": "Prèviament vaig rebre l'Enginyeria Tècnica en Informàtica de Gestió i el Màster en Programari Lliure per la Universitat de Lleida els anys 2006 i 2008, respectivament. Després vaig obtenir el Doctorat en Computació a la Universitat Politècnica de Catalunya (UPC) el maig de 2013, mentre estava als grups de recerca MOVING i ViRVIG. Em vaig centrar en la simulació i visualització de fluids en temps real, utilitzant el mètode Lattice Boltzmann a CUDA i OpenGL amb efectes visuals en temps real.",
+        "PARAGRAPH3_TAG": "Els meus coneixements no es limiten només a la meva investigació, ja que sempre en busco més, i segurament em trobareu llegint nous articles i llibres sobre noves tecnologies que sorgeixen, ja que els meus interessos van des de l'animació física i la visualització fins a la programació de GPU, l'aprenentatge automàtic, la intel·ligència artificial i l'optimització."
     },
     "INTERESTS": {
         "FIELD1": "Intel·ligència Artificial",
@@ -45,7 +45,7 @@
     "PROFESSIONAL_COMPANY2_TAG": "Universitat de Lleida",
     "PROFESSIONAL_INIDATE2_TAG": "Febrer 2008",
     "PROFESSIONAL_ENDDATE2_TAG": "Juliol 2008",
-    "PROFESSIONAL_DESCRIPTION2_TAG": "Docència de l'assignatura d'Àlegra de l'Enginyeria Tècnica en Informàtica de Gestió",
+    "PROFESSIONAL_DESCRIPTION2_TAG": "Docència de l'assignatura d'Àlgebra de l'Enginyeria Tècnica en Informàtica de Gestió",
     
     "_comment3.3": "PROFESSIONAL POSITION 3 - RESEARCH ASSISTANT",
     "PROFESSIONAL_POSITION3_TAG": "Assistent de recerca",
@@ -59,14 +59,14 @@
     "PROFESSIONAL_COMPANY4_TAG": "Universitat Politècnica de Catalunya",
     "PROFESSIONAL_INIDATE4_TAG": "Gener 2009",
     "PROFESSIONAL_ENDDATE4_TAG": "Gener 2013",
-    "PROFESSIONAL_DESCRIPTION4_TAG": "Investigació i desenvolupament de simulacions de fluïds en temps real dins del meu doctorat. La motivació principal del projecte es trobava en la complexitat de les siluacions físiques i, més concretament, dels fluïds per aplicacions interactives com, per exemple, els videojocs. Els prototipus implementats es van desenvolupar en C++, OpenMP i CUDA per a les simulacions, OpenGL per a la visualització interactiva i amb Qt per a les interfícies d'usuari en sistemes Linux. Durant aquest temps es van fer 3 publicacions en congressos nacionals (ANACAP 2009) i internacionals (GRAPP 2013 i Eurographics 2013) i la defensa de la tesi al maig de 2013. Finançament per part de l'Agència de Gestió d'Ajuts Universitaris i de Recerca de la Generalitat de Catalunya i de la Universitat Politècnica de Catalunya.",
+    "PROFESSIONAL_DESCRIPTION4_TAG": "Investigació i desenvolupament de simulacions de fluids en temps real dins del meu doctorat. La motivació principal del projecte es trobava en la complexitat de les simulacions físiques i, més concretament, dels fluids per aplicacions interactives com, per exemple, els videojocs. Els prototipus implementats es van desenvolupar en C++, OpenMP i CUDA per a les simulacions, OpenGL per a la visualització interactiva i Qt per a les interfícies d'usuari en sistemes Linux. Durant aquest temps es van fer 3 publicacions en congressos nacionals (ANACAP 2009) i internacionals (GRAPP 2013 i Eurographics 2013) i la defensa de la tesi al maig de 2013. Finançament per part de l'Agència de Gestió d'Ajuts Universitaris i de Recerca de la Generalitat de Catalunya i de la Universitat Politècnica de Catalunya.",
 
     "_comment3.5": "PROFESSIONAL POSITION 5 - RESEARCH ENGINEER",
     "PROFESSIONAL_POSITION5_TAG": "Enginyer R+D",
     "PROFESSIONAL_COMPANY5_TAG": "Mediapro",
     "PROFESSIONAL_INIDATE5_TAG": "Febrer 2014",
     "PROFESSIONAL_ENDDATE5_TAG": "Juliol 2015",
-    "PROFESSIONAL_DESCRIPTION5_TAG": "Projecte Mediacoach. Les tasques anaven des de la implementació de noves funcionalitats i la millora de la base de codi existent a la gestió de noves versions de l'aplicació. El projecte està creat a partir de C++, C# i Qt per a entorns MS Windows",
+    "PROFESSIONAL_DESCRIPTION5_TAG": "Projecte Mediacoach. Les tasques anaven des de la implementació de noves funcionalitats i la millora de la base de codi existent a la gestió de noves versions de l'aplicació. El projecte estava creat a partir de C++, C# i Qt per a entorns MS Windows",
 
     "_comment3.6": "PROFESSIONAL POSITION 6 - PROFESSOR ASSITANT IN DEEP LEARNING",
     "PROFESSIONAL_POSITION6_TAG": "Assistent de docència en Deep Learning",
@@ -94,7 +94,7 @@
     "PROFESSIONAL_COMPANY9_TAG": "Universitat de Lleida",
     "PROFESSIONAL_INIDATE9_TAG": "Setembre 2018",
     "PROFESSIONAL_ENDDATE9_TAG": "Present",
-    "PROFESSIONAL_DESCRIPTION9_TAG": "Investigació dins del camp de Machine Learning, Constraing Programing i Optimització. Diverses publicacions sobre aplicacions de Testing Combinatori i Mineria de Processos. Es van desenvolupar projectes de classificació de cultius i monitorització de l'arrós a partir d'imatges de satèl·lit dins del marc de les subvencions PAC (contracte amb la Generalitat de Catalunya) i, dins d'aquest context, vaig crear una imatge docker per a la descàrrega i el processament de les imatges del satèl·lit ESA Copernicus (usada per Vunkers SL). Durant aquest temps també he impartit docència als campus d'Igualada i Lleida, tant al Grau com al Màster d'Infrmàtica, fent les assignatures de Seguretat, Projecte Web, Algorísimca, Sistemes d'Informació (ERP, SCM, CRM), Intel·ligència Artificial i Desenvolupament de Jocs per a Mòbils.",
+    "PROFESSIONAL_DESCRIPTION9_TAG": "Investigació dins del camp de Machine Learning, Constraing Programming i Optimització. Diverses publicacions sobre aplicacions de Testing Combinatori i Mineria de Processos. S'han desenvolupat projectes de classificació de cultius i monitorització de l'arrós a partir d'imatges de satèl·lit dins del marc de les subvencions PAC (contracte amb la Generalitat de Catalunya) i, dins d'aquest context, vaig crear una imatge docker per a la descàrrega i el processament de les imatges dels satèl·lits ESA Copernicus (usada per Vunkers SL). Durant aquest temps també he impartit docència als campus d'Igualada i Lleida, tant al Grau com al Màster d'Infrmàtica, fent les assignatures de Seguretat, Projecte Web, Algorísimca, Sistemes d'Informació (ERP, SCM, CRM), Intel·ligència Artificial i Desenvolupament de Jocs per a Mòbils.",
 
     "_comment3.10": "PROFESSIONAL SKILLS",
     "PROFESSIONAL_SKILL_C++":"C++",
